@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Timetable</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Class Timetable</h1>
+        <table class="table table-bordered table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th>Time</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>9:00 - 10:00</td>
+                    <td class="subject" data-teacher="John Doe" data-subject="Mathematics">Mathematics</td>
+                    <td class="subject" data-teacher="Jane Smith" data-subject="English">English</td>
+                    <td class="subject" data-teacher="John Doe" data-subject="Mathematics">Mathematics</td>
+                    <td class="subject" data-teacher="Jane Smith" data-subject="English">English</td>
+                    <td class="subject" data-teacher="John Doe" data-subject="Mathematics">Mathematics</td>
+                </tr>
+                <tr>
+                    <td>10:00 - 11:00</td>
+                    <td class="subject" data-teacher="Jane Smith" data-subject="English">English</td>
+                    <td class="subject" data-teacher="John Doe" data-subject="Mathematics">Mathematics</td>
+                    <td class="subject" data-teacher="Jane Smith" data-subject="English">English</td>
+                    <td class="subject" data-teacher="John Doe" data-subject="Mathematics">Mathematics</td>
+                    <td class="subject" data-teacher="Jane Smith" data-subject="English">English</td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal for teacher details -->
+    <div class="modal fade" id="teacherModal" tabindex="-1" aria-labelledby="teacherModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="teacherModalLabel">Teacher Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Name:</strong> <span id="teacherName"></span></p>
+                    <p><strong>Subject:</strong> <span id="teacherSubject"></span></p>
+                    <p><strong>Email:</strong> <span id="teacherEmail"></span></p>
+                    <p><strong>Phone:</strong> <span id="teacherPhone"></span></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="contactTeacher">Contact Teacher</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
